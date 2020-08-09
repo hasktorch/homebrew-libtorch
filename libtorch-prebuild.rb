@@ -8,9 +8,13 @@ class LibtorchPrebuild < Formula
   bottle :unneeded
 
   def install
-    system "pwd"
-    system "ls"
-    system "make", "install", "DESTDIR=#{prefix}"
+    system "bash", "-c", "cd include/torch; for i in csrc/api/include/torch/* ; do ln -s $i ;done"
+    system "bash", "-c", "install -d #{prefix}/bin"
+    system "bash", "-c", "install -d #{prefix}/include"
+    system "bash", "-c", "install -d #{prefix}/share"
+    system "bash", "-c", "install bin/* #{prefix}/bin"
+    system "bash", "-c", "install include/* #{prefix}/include"
+    system "bash", "-c", "install share/* #{prefix}/share"
   end
 
   test do
