@@ -14,3 +14,6 @@ jobs:
       run: |
         brew tap hasktorch/libtorch-prebuild https://github.com/hasktorch/homebrew-libtorch-prebuild
         brew install libtorch-prebuild
+    - name: Test libtorch
+      run: |
+        brew test libtorch-prebuild
