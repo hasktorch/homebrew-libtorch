@@ -12,9 +12,9 @@ class LibtorchPrebuild < Formula
     system "bash", "-c", "install -d #{prefix}/include"
     system "bash", "-c", "install -d #{prefix}/lib"
     system "bash", "-c", "install -d #{prefix}/share"
-    system "bash", "-c", "install include/* #{prefix}/include"
-    system "bash", "-c", "install lib/* #{prefix}/lib"
-    system "bash", "-c", "install share/* #{prefix}/share"
+    system "bash", "-c", "cp -a include/* #{prefix}/include"
+    system "bash", "-c", "cp -a lib/* #{prefix}/lib"
+    system "bash", "-c", "cp -a share/* #{prefix}/share"
   end
 
   test do
