@@ -10,5 +10,5 @@ jobs:
     - name: Setup tool-chains
       run: |
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-        brew tap hasktorch/libtorch
-        brew install libtorch
+        brew tap hasktorch/libtorch-prebuild
+        brew install libtorch-prebuild
