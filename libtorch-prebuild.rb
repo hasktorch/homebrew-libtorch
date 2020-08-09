@@ -1,16 +1,16 @@
-class Libtorch < Formula
+class LibtorchPrebuild < Formula
   desc "Tensors and dynamic neural networks"
   homepage "https://pytorch.org/"
   url "https://download.pytorch.org/libtorch/cpu/libtorch-macos-1.6.0.zip"
-  sha256 ""
+  sha256 "e1140bed7bd56c26638bae28aebbdf68e588a9fae92c6684645bcdd996e4183c"
   license "BSD-3-Clause"
 
   bottle :unneeded
 
   def install
-    mkdir "build" do
-      system "make", "install", "DESTDIR=#{prefix}"
-    end
+    system "pwd"
+    system "ls"
+    system "make", "install", "DESTDIR=#{prefix}"
   end
 
   test do

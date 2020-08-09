@@ -1,4 +1,4 @@
-name: stack-macos
+name: macos
 
 on: [push, pull_request]
 
@@ -10,5 +10,7 @@ jobs:
     - name: Setup tool-chains
       run: |
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-        brew tap hasktorch/libtorch-prebuild
+    - name: Install libtorch
+      run: |
+        brew tap hasktorch/libtorch-prebuild https://github.com/hasktorch/homebrew-libtorch-prebuild
         brew install libtorch-prebuild
