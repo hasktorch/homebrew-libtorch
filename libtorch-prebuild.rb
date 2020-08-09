@@ -9,12 +9,12 @@ class LibtorchPrebuild < Formula
 
   def install
     system "bash", "-c", "cd include/torch; for i in csrc/api/include/torch/* ; do ln -s $i ;done"
-    system "bash", "-c", "install -d #{prefix}/include"
-    system "bash", "-c", "install -d #{prefix}/lib"
-    system "bash", "-c", "install -d #{prefix}/share"
-    system "bash", "-c", "cp -a include/* #{prefix}/include"
-    system "bash", "-c", "cp -a lib/* #{prefix}/lib"
-    system "bash", "-c", "cp -a share/* #{prefix}/share"
+    system "bash", "-c", "install -d #{include}"
+    system "bash", "-c", "install -d #{lib}"
+    system "bash", "-c", "install -d #{share}"
+    system "bash", "-c", "cp -a include/* #{include}"
+    system "bash", "-c", "cp -a lib/* #{lib}"
+    system "bash", "-c", "cp -a share/* #{share}"
   end
 
   test do
