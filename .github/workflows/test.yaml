@@ -16,4 +16,5 @@ jobs:
         brew install libtorch-prebuild
     - name: Test libtorch
       run: |
+        brew audit --strict libtorch-prebuild
         brew test libtorch-prebuild
