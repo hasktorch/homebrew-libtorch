@@ -1,4 +1,4 @@
-class LibtorchPrebuildAT18 < Formula
+class LibtorchPrebuildAT181 < Formula
   desc "Tensors and dynamic neural networks"
   homepage "https://pytorch.org/"
   url "https://download.pytorch.org/libtorch/cpu/libtorch-macos-1.8.1.zip"
