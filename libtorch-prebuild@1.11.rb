@@ -5,8 +5,6 @@ class LibtorchPrebuildAT111 < Formula
   sha256 "27bb17e6ea35e2cb12d388f54319b4e2b80e7532c1ce2b2f6903c1753365c3ef"
   license "BSD-3-Clause"
 
-  bottle :unneeded
-
   def install
     system "bash", "-c", "cd include/torch; for i in csrc/api/include/torch/* ; do ln -s $i ;done"
     system "bash", "-c", "install -d #{include}"
